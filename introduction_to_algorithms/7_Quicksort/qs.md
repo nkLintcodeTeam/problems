@@ -20,8 +20,8 @@ x选择最后一个元素A[r]。
 QUICKSORT(A, p, r)
     if p<r
         mid=PARTITION(A, p, r)
-        QUICKSORT(A, mid-1)
-        QUICKSORT(A, mid+1)
+        QUICKSORT(A, p, mid-1)
+        QUICKSORT(A, mid+1, r)
 
 PARTITION(A, p, r)
     x=A[r]
