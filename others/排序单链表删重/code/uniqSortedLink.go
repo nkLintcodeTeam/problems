@@ -31,6 +31,8 @@ func deleteDuplicate(n *Node) *Node {
 		return nil
 	}
 
+	// 中间重复的，以及最后重复的，都好处理，就是开头重复的不好处理
+	// 因此创建一个虚拟的头结点，这样就好处理了
 	start := NewNode(0)
 	start.next = n
 

@@ -38,6 +38,8 @@ func (q *Queue) Write(v int) error {
 	if q.writeIdx >= len(q.data) {
 		q.writeIdx = 0
 	}
+	// 面试时忘了加 q.num>0，被面试官指出来了
+	// 这个必须加，只有当有数据的时候，才需要移动读指针
 	if q.readIdx == q.writeIdx && q.num > 0 {
 		q.readIdx += 1
 		q.num -= 1
