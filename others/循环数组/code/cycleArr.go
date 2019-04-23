@@ -34,7 +34,7 @@ func (q *Queue) Read() (int, error) {
 	return res, nil
 }
 
-func (q *Queue) Append(v int) error {
+func (q *Queue) Write(v int) error {
 	if q.writeIdx >= len(q.data) {
 		q.writeIdx = 0
 	}
@@ -54,11 +54,11 @@ func main() {
 	// s := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 	var rst int
 	var err error
-	q.Append(1)
-	q.Append(2)
-	q.Append(3)
-	q.Append(4)
-	q.Append(5)
+	q.Write(1)
+	q.Write(2)
+	q.Write(3)
+	q.Write(4)
+	q.Write(5)
 	rst, err = q.Read()
 	fmt.Printf("rst:%d, err:%+v\n", rst, err)
 	rst, err = q.Read()
