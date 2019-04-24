@@ -25,7 +25,7 @@ introduction_to_algorithms
     15_DynamicProgramming
     16_GreedyAlgorithms
     22_ElementaryGraphAlgorithms
-        22_2_bfs
+        22_2_bfs wncbb Done
         22_3_dfs
         22_4_topologicalSort
         22_5_stronglyConnectedComponents wncbb Doing
