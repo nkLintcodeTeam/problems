@@ -1,5 +1,7 @@
 # 20190423计划
 
+[TOC]
+
 ## 背景
 工作之余，练练脑子。
 
@@ -26,7 +28,7 @@ introduction_to_algorithms
     16_GreedyAlgorithms
     22_ElementaryGraphAlgorithms
         22_2_bfs wncbb Done
-        22_3_dfs
+        22_3_dfs wncbb Doing
         22_4_topologicalSort
         22_5_stronglyConnectedComponents wncbb Doing
     24_SingleSourceShortestPaths
@@ -91,4 +93,63 @@ Airbnb
     Y
     Z
 ```
+
+## 理论
+
+#### 一致性(强，弱，最终)
+
+#### 操作系统常见概念
+1. 锁实现(单核锁，多核锁)
+
+#### 网络常见概念
+1. http2.0
+2. 流量控制与拥塞控制
+
+#### 微服务环境下，数据一致性方案(各大公司方案)
+
+#### 一致性hash算法
+
+## 开源项目源码阅读
+
+#### go
+
+1. slice底层实现
+2. map底层实现
+3. 内存分配(类似tcmalloc, 顺带jemalloc)
+4. gc机制
+5. 协程机制，比如调度等
+6. channel实现
+7. interface实现
+   
+#### leveldb
+
+顺带把常见的系统函数过一遍
+
+#### redis
+
+1. 集群方案, 扩容缩容(面试问的很多很细)
+2. 顺带把select/poll/epoll的内容过一遍
+
+#### mysql
+1. 事务过程
+2. 锁实现
+3. 性能调优
+
+#### raft
+比如etcd, consul
+
+raft算法go实现
+
+[https://github.com/hashicorp/raft](https://github.com/hashicorp/raft)
+
+#### kafka/tmq
+1. 时间轮
+2. at least once, at most once, exactly once
+
+#### nginx
+1. 多进程数据交互方式
+
+#### mapreduce/spark/flink基础的概念
+
+#### HDFS/HBase/Hive/TiDB基础的概念
 
