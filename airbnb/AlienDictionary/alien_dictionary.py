@@ -54,6 +54,8 @@ s=Solution()
 
 words=["ze","yf","xd","wd","vd","ua","tt","sz","rd", "qd","pz","op","nw","mt","ln","ko","jm","il", "ho","gk","fa","ed","dg","ct","bb","ba"]
 print s.alienOrder(words)
+words=['ac', 'ab']
+print s.alienOrder(words)
 
 
 
