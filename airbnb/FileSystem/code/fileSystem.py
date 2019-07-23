@@ -6,12 +6,14 @@ class Node:
         self.value=value
         self.callback=None
         self.children=collections.defaultdict()
-    # def next(self, value):
-    #     if value in self.children:
-    #         return self.children[value]
-    #     return None
-    # def addChild(self, value, child):
-    #     self.children[value]=child
+    """
+    def next(self, value):
+        if value in self.children:
+            return self.children[value]
+        return None
+    def addChild(self, value, child):
+        self.children[value]=child
+    """
 
 class FileSystem:
     def __init__(self):
@@ -72,6 +74,7 @@ class FileSystem:
 
 s=FileSystem()
 s.create('/a', 2)
+print s
 s.create('/a/b', 1)
 def abtmp():
     print 'this is /a/b tmp'
