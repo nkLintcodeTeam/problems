@@ -4,10 +4,10 @@ import collections
 
 class TrieNode:
     def __init__(self, value):
-        self.isWord=False
         self.value=value
         self.children=collections.OrderedDict()
         self.word=''
+        self.isWord=False
         
     @classmethod
     def insert(cls, root, word):
