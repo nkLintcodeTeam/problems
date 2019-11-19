@@ -32,7 +32,7 @@ MAX-HEAPIFY(A, i)
 BUILD-MAX-HEAP(A)
     A.heap-size=A.length
     for i=A.length/2 down to 0
-        MAX-HEAPIFY(A, i)
+        MAX-HEAPIFY(A, i)
 
 HEAQPSORT(A)
     BUILD-MAX-HEAP(A)

@@ -17,6 +17,8 @@ class UnionFindSet:
     def union(self, x, y):
         px=self.find(x)
         py=self.find(y)
+        if px==py:
+            return
         if self.ranks[px]>self.ranks[py]:
             self.parents[py]=px
         if self.ranks[px]<self.ranks[py]:
@@ -34,6 +36,7 @@ print t.find(0)
 print t.find(1)
 
 t.union(2, 3)
+t.union(0, 2)
 t.union(0, 2)
 
 print t.parents
