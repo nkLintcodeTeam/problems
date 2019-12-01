@@ -18,53 +18,29 @@ func main() {
 	printMatrix(s)
 }
 
-/*
-func print2d(s [][]int) {
-	curX := 0
-	curY := 0
-	delta := [][]int{
-		{0, 1},
-		{1, 0},
-		{-1, 0},
-		{0, -1},
-	}
-	curWidth := len(s[0])
-	curHeight := len(s)
-
-	curPos := 0
-	for curWidth > 0 || curHeight > 0 {
-		dX := delta[curPos][0]
-		dY := delta[curPos][1]
-
-		if
-
-	}
-}
-*/
-
 func printMatrix(s [][]int) {
 	beginX, beginY := 0, 0
-	rowNum := len(s) - 1
-	columnNum := len(s[0]) - 1
-	if rowNum == 0 {
+	rowNum := len(s)
+	columnNum := len(s[0])
+	if rowNum == 1 {
 		for _, v := range s[0] {
 			fmt.Printf("%d, ", v)
 		}
 		return
 	}
-	if columnNum == 0 {
+	if columnNum == 1 {
 		for _, v := range s {
 			fmt.Printf("%d, ", v[0])
 		}
 		return
 	}
-	for beginX <= rowNum && beginY <= columnNum {
+	for beginX < rowNum && beginY < columnNum {
 		curX, curY := beginX, beginY
-		for curY < columnNum {
+		for curY < columnNum-1 {
 			fmt.Printf("%d, ", s[curX][curY])
 			curY++
 		}
-		for curX < rowNum {
+		for curX < rowNum-1 {
 			fmt.Printf("%d, ", s[curX][curY])
 			curX++
 		}
